@@ -1,0 +1,5 @@
+#!/bin/usr/env bash
+
+cp ./bin/bs64 /usr/local/bin/bs64
+chmod +x /usr/local/bin/bs64
+echo "bs64 installed" 
