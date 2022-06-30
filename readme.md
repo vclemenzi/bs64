@@ -1,7 +1,7 @@
 # BS64 - Encode/Decode base64
 
 ```bash
-base64 [--encode | --decode] [-f <file> | -s string]
+bs64 [--encode | --decode] [-f <file> | -s string]
 ```
 
 ## Install Guide
