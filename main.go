@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/aThebigbot/base64/base64"
+	"github.com/fatih/color"
 	"io/ioutil"
 	"os"
 )
@@ -11,7 +12,7 @@ func main() {
 	switch os.Args[1] {
 	case "--encode", "-e":
 		if len(os.Args) <= 3 {
-			fmt.Println("Usage: base64 --encode [-f|-s] <data>")
+			color.Red("Usage: bs64 --encode [-f|-s] <data> [<output>]")
 			return
 		}
 		if os.Args[2] == "-f" || os.Args[2] == "--file" {
@@ -37,11 +38,11 @@ func main() {
 				ioutil.WriteFile(os.Args[4], []byte(base64.Encode(os.Args[3])), 0644)
 			}
 		} else {
-			fmt.Println("Usage: base64 --encode [-f|-s] <data>")
+			color.Red("Usage: bs64 --encode [-f|-s] <data> [<output>]")
 		}
 	case "--decode", "-d":
 		if len(os.Args) <= 3 {
-			fmt.Println("Usage: base64 --decode [-f|-s] <data>")
+			color.Red("Usage: bs64 --decode [-f|-s] <data> [<output>]")
 			return
 		}
 		if os.Args[2] == "-f" || os.Args[2] == "--file" {
@@ -67,9 +68,9 @@ func main() {
 				ioutil.WriteFile(os.Args[4], []byte(base64.Decode(os.Args[3])), 0644)
 			}
 		} else {
-			fmt.Println("Usage: base64 --decode [-f|-s] <data>")
+			color.Red("Usage: bs64 --decode [-f|-s] <data> [<output>]")
 		}
 	default:
-		fmt.Println("Usage: base64 [--encode | --decode] [-f <file> | -s string]")
+		color.Red("Usage: bs64 [-e (--encode) | -d (--decode)] [-f (--file) | -s (--string)] <data> [<output>]")
 	}
 }
