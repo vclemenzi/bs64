@@ -19,7 +19,7 @@ git clone https://github.com/aThebigbot/bs64
 ```bash
 [sudo] sh install
 ```
-## 🐛 Example
+## 🐛 Example & Guide 
 
 ##### 🔒 Encode example
 
@@ -35,4 +35,10 @@ Encode file (Hello.txt, `Hello`)
 ```bash
 bs64 --encode --file Hello.txt
 # SGVsbG8=
+```
+
+Set output file (The output file may or may not exist) 
+
+```bash
+bs64 --encode [--string | --file] [string | file] [output file]
 ```
