@@ -21,7 +21,7 @@ git clone https://github.com/aThebigbot/bs64
 ```
 ## 🐛 Example & Guide 
 
-##### 🔒 Encode example
+##### 🔒 Encode example & tutorial 
 
 Encode string
 ```bash
@@ -42,3 +42,23 @@ Set output file (The output file may or may not exist)
 ```bash
 bs64 --encode [--string | --file] [string | file] [output file]
 ```
+##### 🔓 Decode example & tutorial
+
+Decode string
+
+```bash
+bs64 --encode --string SVGsbG8=
+# Hello
+```
+
+Decode file (Hello.txt, `SVGsbG8=`)
+
+```bash
+bs64 --encode --file Hello.txt
+# Hello
+```
+
+Set output file (The output file may or may not exist) 
+
+```bash
+bs64 --encode [--string | --file] [string | file] [output file]
