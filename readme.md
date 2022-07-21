@@ -1,4 +1,4 @@
-# `BS64`
+# BS64
 
 Encode & Decode base64
 
