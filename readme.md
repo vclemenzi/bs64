@@ -11,7 +11,7 @@ bs64 [-e (--encode) | -d (--decode)] [-f (--file) | -s (--string)] <data> [<outp
 - Clone repository
 
 ```bash
-git clone https://github.com/aThebigbot/bs64
+git clone https://github.com/vclemenzi/bs64
 ```
 
 - Run install
